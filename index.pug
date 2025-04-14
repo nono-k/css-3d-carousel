@@ -4,5 +4,17 @@ html(lang="ja")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
-    link(rel="stylesheet" href="style.css")
+    link(rel="stylesheet" href="styles.css")
   body
+    .container
+      .scene
+        .carousel
+          - for (var i = 0; i < 8; i++)
+            .carousel__item
+              |!{i+1}
+      .carousel__prev
+        |Prev
+      .carousel__next
+        |Next
+
+    script(src="main.js")
